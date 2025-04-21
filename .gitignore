@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Virtual environments
+venv/
+
+# macOS
+.DS_Store
+
+# Pipenv
+Pipfile.lock
+
+# Static & media (if generated externally)
+staticfiles/
+media/
