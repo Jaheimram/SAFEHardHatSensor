@@ -2,6 +2,14 @@
 
 from django.db import migrations
 
+def create_superuser(apps, schema_editor):
+    User = apps.get_model('auth', 'User')
+    if not User.objects.filter(username='admin').exists():
+        User.objects.create_superuser(
+            username='admin',
+            email='admin@example.com',
+            password='adminpassword'
+        )
 
 class Migration(migrations.Migration):
 
@@ -11,4 +19,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RunPython(create_superuser),
     ]
