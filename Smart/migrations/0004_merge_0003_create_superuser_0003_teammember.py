@@ -14,9 +14,9 @@ def create_superuser(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Smart', '0003_create_superuser'),
-        ('Smart', '0003_teammember'),
-    ]
+    ('Smart', '0003_teammember'),
+]
+
 
     operations = [
         migrations.RunPython(create_superuser, elidable=True),
