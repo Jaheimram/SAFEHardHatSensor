@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-hzej)p&qv39o%th*+*7j7so=2vw%+!e&h+78@d%j4p(k*#z2t)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['safe-hardhat-sensor.onrender.com']
 
 
 # Application definition
