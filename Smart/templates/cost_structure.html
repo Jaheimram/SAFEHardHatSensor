@@ -1,25 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cost Structure</title>
-</head>
-<body>
-    <h1>Our Cost Structure</h1>
-    <p><strong>Product Price:</strong> ${{ product_price }}</p>
+{% extends 'base.html' %}
 
-    <h2>App Subscription Tiers</h2>
-    <ul>
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center mb-4">Our Cost Structure</h2>
+
+    <div class="text-center mb-5">
+        <h4>Smart HardHat Device</h4>
+        <p class="lead font-weight-bold">${{ product_price }}</p>
+    </div>
+
+    <div class="row">
         {% for tier in tiers %}
-            <li>
-                <h3>{{ tier.name }} – ${{ tier.price }}</h3>
-                <ul>
-                    {% for feature in tier.features %}
-                        <li>{{ feature }}</li>
-                    {% endfor %}
-                </ul>
-            </li>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 text-center border-primary shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ tier.name }}</h5>
+                    <h6 class="card-subtitle text-muted mb-3">${{ tier.price }}</h6>
+                    <ul class="list-unstyled">
+                        {% for feature in tier.features %}
+                        <li>✔️ {{ feature }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
         {% endfor %}
-    </ul>
-</body>
-</html>
+    </div>
+</div>
+{% endblock %}
