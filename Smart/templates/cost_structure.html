@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cost Structure</title>
+</head>
+<body>
+    <h1>Our Cost Structure</h1>
+    <p><strong>Product Price:</strong> ${{ product_price }}</p>
+
+    <h2>App Subscription Tiers</h2>
+    <ul>
+        {% for tier in tiers %}
+            <li>
+                <h3>{{ tier.name }} – ${{ tier.price }}</h3>
+                <ul>
+                    {% for feature in tier.features %}
+                        <li>{{ feature }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
