@@ -119,3 +119,12 @@ def contact(request):
         'pdf_url': os.path.join(settings.MEDIA_URL, 'case_studies', case_id, filename),
         'filename': filename
     })
+def cost_structure(request):
+    return render(request, 'cost_structure.html', {
+        'product_price': 60,
+        'tiers': [
+            {'name': 'Free', 'price': 0, 'features': ['Basic access', 'Limited support']},
+            {'name': 'Pro', 'price': 20, 'features': ['Extended features', 'Email support']},
+            {'name': 'Premium', 'price': 35, 'features': ['All features', 'Priority support']},
+        ]
+    })
