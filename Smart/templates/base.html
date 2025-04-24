@@ -45,6 +45,9 @@
                     <a class="nav-link {% if active_tab == 'todos' %}active{% endif %}" href="{% url 'todos' %}">
                         <i class="bi bi-list-check me-1"></i> Todos
                     </a>
+                 <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'cost-structure' %}">Cost Structure</a>
+                </li>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
