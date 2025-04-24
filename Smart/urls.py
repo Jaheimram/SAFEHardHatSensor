@@ -18,6 +18,7 @@ urlpatterns = [
     path('faq/', faq_list, name='faq'),
     path('case-studies/', case_study_list, name='case_study_list'),
     path('case-studies/<str:case_id>/<str:filename>/', case_study_detail, name='case_study_detail'),
+    path('cost-structure/', views.cost_structure, name='cost-structure'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
  
