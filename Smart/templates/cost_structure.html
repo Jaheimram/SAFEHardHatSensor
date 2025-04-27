@@ -13,9 +13,9 @@
         {% for tier in tiers %}
         <div class="col-md-4 mb-4">
             <div class="card h-100 text-center border-primary shadow-sm">
-                <div class="card-body">
+                <div class="card-body text-dark"> <!-- ADDED text-dark class here -->
                     <h5 class="card-title">{{ tier.name }}</h5>
-                    <h6 class="card-subtitle text-muted mb-3">${{ tier.price }}</h6>
+                    <h6 class="card-subtitle mb-3">${{ tier.price }}</h6> <!-- Removed 'text-muted' -->
                     <ul class="list-unstyled">
                         {% for feature in tier.features %}
                         <li>✔️ {{ feature }}</li>
